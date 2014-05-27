@@ -1,0 +1,23 @@
+{
+  "name": "hyperquest-timeout",
+  "version": "0.0.0",
+  "description": "hyperquest-timeout ==================",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/index.test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/tbuchok/hyperquest-timeout.git"
+  },
+  "author": "Tom Buchok <tom@buchok.com> (http://buchok.com/)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tbuchok/hyperquest-timeout/issues"
+  },
+  "homepage": "https://github.com/tbuchok/hyperquest-timeout",
+  "devDependencies": {
+    "hyperquest": "^0.3.0",
+    "tap": "^0.4.9"
+  }
+}
