@@ -1,7 +1,7 @@
 {
   "name": "hyperquest-timeout",
   "version": "0.1.0",
-  "description": "hyperquest-timeout ==================",
+  "description": "Timeout hyperquests!",
   "main": "index.js",
   "scripts": {
     "test": "node test/index.test.js"
