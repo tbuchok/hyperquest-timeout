@@ -1,9 +1,8 @@
 function timeout(req, ms) {
-  var interval;
-  req.on('response', function() {
-    clearInterval(interval);
-  });
-  setInterval(req.destroy, ms);
+  var t = setTimeout(function() {
+    req.emit('error', new Error('ETIMEDOUT: ' + ms + ' ms'));
+  }, ms);
+  req.on('response', function() { clearTimeout(t); });
 }
 
 module.exports = timeout;
