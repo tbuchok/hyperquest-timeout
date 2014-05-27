@@ -1,6 +1,6 @@
 {
   "name": "hyperquest-timeout",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "hyperquest-timeout ==================",
   "main": "index.js",
   "scripts": {
