@@ -9,7 +9,7 @@ var server = http.createServer(function(req, res) {
     return; // hangs the server
   res.end('ok!');
 })
-.listen(5000);
+.listen(5000).unref()
 
 test('hyperquest timesout', function(t) {
   var err = undefined;
@@ -29,6 +29,5 @@ test('hyperquest does not timesout', function(t) {
   setTimeout(function() {
     t.notOk(err, 'it should not err');
     t.end();
-    setImmediate(process.exit); // closing server is being annoying!
   }, 200);
 });
