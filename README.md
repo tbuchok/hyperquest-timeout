@@ -19,3 +19,16 @@ var req = hyperquest('http://npmjs.org')
             .pipe(WRITABLE_STREAM);
 timeout(req, 2000);
 ```
+
+Or you can pipe `timeout` as it returns the original `req`:
+
+```js
+var hyperquest = require('hyperquest')
+  , timeout = require('hyperquest-timeout')
+;
+
+READABLE_STREAM
+  .pipe(timeout(hyperquest('http://uploaderthingie.com', 1500)))
+  .pipe(WRITABLE_STREAM)
+;
+```

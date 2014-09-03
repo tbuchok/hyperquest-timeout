@@ -31,3 +31,10 @@ test('hyperquest does not timesout', function(t) {
     t.end();
   }, 200);
 });
+test('chaining', function(t) {
+  timeout(hyperquest('http://localhost:5000/sweet'), 100)
+              .on('end', function() {
+                t.ok(true, 'it should allow for chaining')
+                t.end()
+              });
+});

@@ -4,6 +4,7 @@ function timeout(req, ms) {
     req.emit('error', new Error('ETIMEDOUT: ' + ms + ' ms'));
   }, ms);
   req.on('response', function() { clearTimeout(t); });
+  return req;
 }
 
 module.exports = timeout;
